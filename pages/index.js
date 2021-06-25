@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -7,7 +7,7 @@ import Avatar from '../components/Avatar/Avatar';
 import Skills from '../components/Skills/Skills';
 import Button from '../components/Button/Button';
 export default function Home() {
-  const [theme,settheme]=useState("dark");
+  const [theme, settheme] = useState("dark");
   return (
     <div >
       <Head>
@@ -18,65 +18,66 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"></link>
         <link rel="icon" href="/favicon.ico" />
-        
+
       </Head>
-      <div className={styles.container}>
+      <div>
+        <div className={styles.container}>
 
-        <Header onClick={() => console.log("clicked")}>
-          <Button   >Home</Button>
-          <Button>Project</Button>
-          <Button>About</Button>
-          <Button>Contact</Button>
-          <button style={{cursor:"pointer",backgroundColor:"transparent",border:"none"}} onClick={() => { 
-            if(theme=='dark'){
-              document.documentElement.setAttribute("data-theme", "light");
-              settheme('light');
-            }
-            else{
-              document.documentElement.setAttribute("data-theme","dark");
-              settheme('dark');
-            }
-            }} ><svg height='20px' width='20px' viewBox="-12 0 448 448.045"  xmlns="http://www.w3.org/2000/svg" type="moon" class="jsx-1041309415"><path fill={'dark'==theme?'white':'black'} d="M224.023 448.031c85.715.903 164.012-48.488 200.118-126.23a171.044 171.044 0 01-72.118 14.23c-97.156-.11-175.89-78.844-176-176 .973-65.719 37.235-125.832 94.91-157.351A334.474 334.474 0 00224.024.03c-123.714 0-224 100.29-224 224 0 123.715 100.286 224 224 224zm0 0"></path></svg></button>
-        </Header>
+          <Header onClick={() => console.log("clicked")}>
+            <Button   >Home</Button>
+            <Button>Project</Button>
+            <Button>About</Button>
+            <Button>Contact</Button>
+            <button style={{ cursor: "pointer", backgroundColor: "transparent", border: "none" }} onClick={() => {
+              if (theme == 'dark') {
+                document.documentElement.setAttribute("data-theme", "light");
+                settheme('light');
+              }
+              else {
+                document.documentElement.setAttribute("data-theme", "dark");
+                settheme('dark');
+              }
+            }} ><svg height='20px' width='20px' viewBox="-12 0 448 448.045" xmlns="http://www.w3.org/2000/svg" type="moon" class="jsx-1041309415"><path fill={'dark' == theme ? 'white' : 'black'} d="M224.023 448.031c85.715.903 164.012-48.488 200.118-126.23a171.044 171.044 0 01-72.118 14.23c-97.156-.11-175.89-78.844-176-176 .973-65.719 37.235-125.832 94.91-157.351A334.474 334.474 0 00224.024.03c-123.714 0-224 100.29-224 224 0 123.715 100.286 224 224 224zm0 0"></path></svg></button>
+          </Header>
 
-        <div className={styles.profile}>
-          <div className={styles.name}>
-            <text className={styles.fname}>
-              I am a Front-end Developer.
-            </text>
+          <div className={styles.profile}>
+            <div className={styles.name}>
+              <text className={styles.fname}>
+                I am a Front-end Developer.
+              </text>
 
-          </div>
-          <Avatar>
-            <Image src='/sit.png' width="300px" height="300px" layout='intrinsic' priority={true} />
-          </Avatar>
+            </div>
+            <Avatar>
+              <Image src='/sit.png' width="300px" height="300px" layout='intrinsic' priority={true} />
+            </Avatar>
 
-        </div>
-
-      </div>
-      <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path className={styles.pth} fillOpacity="1" d="M0,320L60,288C120,256,240,192,360,170.7C480,149,600,171,720,197.3C840,224,960,256,1080,256C1200,256,1320,224,1380,208L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-      <div className={styles.mid}>
-        <text className={styles.skill}>My Skills</text>
-        <div className={styles.tech}>
-          <Skills score='9' name="React.js" />
-          <Skills score='8' name="JavaScript" />
-          <Skills score='7' name="Nodejs" />
-          <Skills score='8' name="Python" />
-        </div>
-      </div>
-
-      <footer>
-        <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path className={styles.pth} fill-opacity="1" d="M0,224L80,229.3C160,235,320,245,480,229.3C640,213,800,171,960,154.7C1120,139,1280,149,1360,154.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-        <div className={styles.end}>
-          <text className={styles.cname}>Catch Me On...</text>
-          <div className={styles.media}>
-            <a href="#" ><Image src="/fb.png" width="40px" height="40px" /></a>
-            <a href="#" ><Image src="/git.png" width="40px" height="40px" /></a>
-            <a href="#" ><Image src="/linked.png" width="40px" height="40px" /></a>
           </div>
 
         </div>
-      </footer>
+        <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path className={styles.pth} fillOpacity="1" d="M0,320L60,288C120,256,240,192,360,170.7C480,149,600,171,720,197.3C840,224,960,256,1080,256C1200,256,1320,224,1380,208L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+        <div className={styles.mid}>
+          <text className={styles.skill}>My Skills</text>
+          <div className={styles.tech}>
+            <Skills score='9' name="React.js" />
+            <Skills score='8' name="JavaScript" />
+            <Skills score='7' name="Nodejs" />
+            <Skills score='8' name="Python" />
+          </div>
+        </div>
 
+        <footer>
+          <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path className={styles.pth} fill-opacity="1" d="M0,224L80,229.3C160,235,320,245,480,229.3C640,213,800,171,960,154.7C1120,139,1280,149,1360,154.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+          <div className={styles.end}>
+            <text className={styles.cname}>Catch Me On...</text>
+            <div className={styles.media}>
+              <a href="#" ><Image src="/fb.png" width="40px" height="40px" /></a>
+              <a href="#" ><Image src="/git.png" width="40px" height="40px" /></a>
+              <a href="#" ><Image src="/linked.png" width="40px" height="40px" /></a>
+            </div>
+
+          </div>
+        </footer>
+      </div>
     </div>
   )
 }

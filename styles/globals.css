@@ -17,10 +17,11 @@ body,#__next {
   padding: 0;
   margin: 0;
   
-    font-size: 10px;
+    font-size: 0px;
     color: whitesmoke;
     height: 100%;
     width: 100%;
+    background-color: var(--background-first);
 }
 
 

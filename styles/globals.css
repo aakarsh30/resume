@@ -1,15 +1,29 @@
+:root{
+  --background-first: #12232E;
+  --background-second: #203647;
+  --color: whitesmoke;
+  --hover: #007CC7;
+  --font-family: 'Montserrat', sans-serif;
+}
+[data-theme="light"]{
+  --background-first: #F1D1D0;
+  --background-second: white;
+  --color: #333333;
+  --hover: #FBACCC;
+  --font-family: 'Montserrat', sans-serif;
+}
 html,
-body {
+body,#__next {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  
+    font-size: 10px;
+    color: whitesmoke;
+    height: 100%;
+    width: 100%;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+
 
 * {
   box-sizing: border-box;

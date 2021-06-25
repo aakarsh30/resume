@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    padding: 20px 22px;
+    height: 70px;
+    width: 100%;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.name{
+    flex-grow: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    color: var(--color);
+}

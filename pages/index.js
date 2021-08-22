@@ -44,6 +44,8 @@ export default function Home() {
             <div className={styles.name}>
               <text className={styles.fname}>
                 I am a Front-end Developer.
+                <hr></hr>
+                Always love to work on new Technolodgies.Want to have some expreince and money also.
               </text>
 
             </div>
